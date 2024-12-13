@@ -1,1 +1,1 @@
-hint = Instance.new('Hint',workspace) hint.Text = 'the game is currently down for bug fixes until i get home later around 5 EST.'
+for i=1,50 do hint = Instance.new('Message',workspace) hint.Text = 'the game is currently down for bug fixes until i get home later around 5 EST.' end
