@@ -1,1 +1,190 @@
-for i=1,50 do hint = Instance.new('Message',workspace) hint.Text = 'the game is currently down for bug fixes until i get home later around 5 EST.' end
+local function getrandomfurryimage()
+	local images = {
+		'https://pbs.twimg.com/media/GRk3O1JbMAIlAEx?format=jpg',
+		'https://pbs.twimg.com/media/GR-bizibUAEPd2R?format=jpg',
+		'https://pbs.twimg.com/media/GVcEZvPaMAARNvV?format=jpg',
+		'https://pbs.twimg.com/media/GVFrG7WaEAA5u13?format=jpg',
+		'https://pbs.twimg.com/media/GU3371GWcAAx3-6?format=jpg',
+		'https://pbs.twimg.com/media/GUy5aSmaIAAfMr6?format=jpg',
+		'https://pbs.twimg.com/media/GUt9yVtbEAEoPy5?format=jpg',
+		'https://pbs.twimg.com/media/GUEmS3RbQAAsN07?format=jpg',
+		'https://pbs.twimg.com/media/GT_QopRWEAABy_U?format=jpg',
+		'https://pbs.twimg.com/media/GTqhGpDbcAAVka4?format=jpg',
+		'https://pbs.twimg.com/media/GTblvGfagAAf_OA?format=jpg',
+		'https://pbs.twimg.com/media/GTVDy53aoAA4JzM?format=jpg',
+		'https://pbs.twimg.com/media/GTLvyVTbMAAZtNL?format=jpg',
+		'https://pbs.twimg.com/media/GTBEmlobwAEVi0N?format=jpg',
+		'https://pbs.twimg.com/media/GSTYW2YXkAA2Ctz?format=jpg',
+		'https://pbs.twimg.com/media/GQdAYVeagAAbLL_?format=jpg',
+		'https://pbs.twimg.com/media/GP5CK27aAAQnUTG?format=jpg',
+		'https://pbs.twimg.com/media/GOSGCmnbAAA1IcU?format=jpg',
+		'https://pbs.twimg.com/media/GMWkvoOa4AEhvvY?format=jpg',
+		'https://pbs.twimg.com/media/GLinrQiagAArimQ?format=jpg',
+		'https://pbs.twimg.com/media/GKfrk2zbAAAHovT?format=jpg',
+		'https://pbs.twimg.com/media/GJYHpl1WUAAIGcs?format=jpg',
+		'https://pbs.twimg.com/media/GIaLAO4W0AAsOkv?format=jpg',
+		'https://pbs.twimg.com/media/GH2ZQSqakAAk2Ii?format=jpg',
+		'https://pbs.twimg.com/media/GGj8jrJWEAA7aWR?format=jpg',
+		'https://pbs.twimg.com/media/GF6DiMOWoAAQ_0Q?format=jpg',
+		'https://pbs.twimg.com/media/GFgwHy5bsAArfDC?format=jpg',
+		'https://pbs.twimg.com/media/GFlypB8acAEWpaj?format=jpg',
+		'https://pbs.twimg.com/media/GFdWCIVawAAxtEj?format=jpg',
+		'https://pbs.twimg.com/media/GFbv4DVa0AA-Q0-?format=jpg',
+		'https://pbs.twimg.com/media/GFBoX2maAAALCyp?format=jpg',
+		'https://pbs.twimg.com/media/GEdaiqsacAAnK6m?format=jpg',
+		'https://pbs.twimg.com/media/GEI0Q5abcAACV6m?format=jpg',
+		'https://pbs.twimg.com/media/GD5hAv5bYAArZMZ?format=jpg',
+		'https://pbs.twimg.com/media/GD0acRza8AAVRSR?format=jpg',
+		'https://pbs.twimg.com/media/GDqHQT5aQAMfCvc?format=jpg',
+		'https://pbs.twimg.com/media/GDfnrlSaIAAfEU3?format=jpg',
+		'https://pbs.twimg.com/media/GDQZtKoaoAAQ9IN?format=jpg',
+		'https://pbs.twimg.com/media/GC25hivaoAUdVTk?format=jpg',
+		'https://pbs.twimg.com/media/GCsEufZaEAANw5V?format=jpg',
+		'https://pbs.twimg.com/media/GCiL5QgbQAAV__n?format=jpg',
+		'https://pbs.twimg.com/media/GCRUJUKbMAAntmt?format=jpg',
+		'https://pbs.twimg.com/media/GB963a1bMAEickA?format=jpg',
+		'https://pbs.twimg.com/media/GBpL3rsaYAAOyAp?format=jpg',
+		'https://pbs.twimg.com/media/GBfRXf3aQAALdTF?format=jpg',
+		'https://pbs.twimg.com/media/GBZ0Ix_bQAA5P8b?format=jpg',
+		'https://pbs.twimg.com/media/GBE7ZrfaIAEtwBq?format=jpg',
+		'https://pbs.twimg.com/media/GA7Eg4YaEAEOltu?format=jpg',
+		'https://pbs.twimg.com/media/GAwm8-pbIAMA2Zy?format=jpg',
+		'https://pbs.twimg.com/media/GAr4tkQbcAA1Y-Z?format=jpg',
+		'https://pbs.twimg.com/media/GAmGXAWawAAgvj5?format=jpg',
+		'https://pbs.twimg.com/media/GAhFPS2aQAAbxGe?format=jpg',
+		'https://pbs.twimg.com/media/GAXNdxkakAA38MR?format=jpg',
+		'https://pbs.twimg.com/media/GAHiS6DWgAADb0h?format=jpg',
+		'https://pbs.twimg.com/media/F_i1tnxbIAAnQu3?format=jpg',
+		'https://pbs.twimg.com/media/GUFZwjlWIAAuZqr?format=jpg',
+		'https://pbs.twimg.com/media/GT17XPNWcAAW5m-?format=jpg',
+		'https://pbs.twimg.com/media/GTXcRoXXsAAleiV?format=jpg',
+		'https://pbs.twimg.com/media/GTL9osLXAAEBS73?format=jpg',
+		'https://pbs.twimg.com/media/GS9soHUWAAAA2_Q?format=jpg',
+		'https://pbs.twimg.com/media/GSet64XWcAARf1W?format=jpg',
+		'https://pbs.twimg.com/media/GSEvIy-WgAA7diF?format=jpg',
+		'https://pbs.twimg.com/media/GPVMeVwXcAAGYM5?format=jpg',
+		'https://pbs.twimg.com/media/GR1xcDjacAEaeDe?format=jpg',
+		'https://pbs.twimg.com/media/GRv-L85acAcIrHu?format=jpg',
+		'https://pbs.twimg.com/media/GRhJR3qXAAAVcZB?format=jpg',
+		'https://pbs.twimg.com/media/GVaH5ArbYAAFqar?format=jpg',
+		'https://pbs.twimg.com/media/GVG4UAlbYAAXfF_?format=jpg',
+		'https://pbs.twimg.com/media/GVCeSOrWkAEm2Zf?format=jpg',
+		'https://pbs.twimg.com/media/GUv__BJbIAAdZLK?format=jpg',
+		'https://pbs.twimg.com/media/GUqwzAibcAA4Neg?format=jpg',
+		'https://pbs.twimg.com/media/GUgQLasacAATmVY?format=jpg',
+		'https://pbs.twimg.com/media/GUTluFWWcAAUvHW?format=jpg',
+		'https://pbs.twimg.com/media/GUV5UIybUAABR4V?format=jpg',
+		'https://pbs.twimg.com/media/GUFTc9zWQAINS-4?format=jpg',
+		'https://pbs.twimg.com/media/GUNyTVTbIAAhdcr?format=jpg',
+		'https://pbs.twimg.com/media/GTkcCDIbAAEg9Jr?format=jpg',
+		'https://pbs.twimg.com/media/GTU46DubgAE8EmI?format=jpg',
+		'https://pbs.twimg.com/media/GTDEWjzbgAAp_oZ?format=jpg',
+		'https://pbs.twimg.com/media/GTAw7PxbgAA13pO?format=jpg',
+		'https://pbs.twimg.com/media/GS2Ss--a0AAI1Vt?format=jpg',
+		'https://pbs.twimg.com/media/GSDBDvqaIAAyfQX?format=jpg',
+		'https://pbs.twimg.com/media/GRpFYxbaUAENhou?format=jpg',
+		'https://pbs.twimg.com/media/GRj9y9fbEAA8wjw?format=jpg',
+		'https://pbs.twimg.com/media/GRKcQO7bYAEMl92?format=jpg',
+		'https://pbs.twimg.com/media/GPt6uL9bAAAfOTL?format=jpg',
+		'https://pbs.twimg.com/media/GPRpNKNbQAEFEzj?format=jpg',
+		'https://pbs.twimg.com/media/GO9t5_9awAA324G?format=jpg',
+		'https://pbs.twimg.com/media/GOQfdSdbwAAS0iI?format=jpg',
+		'https://pbs.twimg.com/media/GOGMKlEbkAAvCW3?format=jpg',
+		'https://pbs.twimg.com/media/GNdnJ36bwAAGHVf?format=jpg',
+		'https://pbs.twimg.com/media/GMaEIULbIAAc2S4?format=jpg',
+		'https://pbs.twimg.com/media/GLnp9O7agAAjZvg?format=jpg',
+		'https://images.squarespace-cdn.com/content/v1/618b862fea94a12c526c0647/2ba3113a-1984-4a9e-87eb-897a0f7821c9/suburbia6.jpg',
+		'https://images.squarespace-cdn.com/content/v1/618b862fea94a12c526c0647/6a556f86-07b7-4e71-9539-b092f7f97490/the+dock.jpg',
+		'https://images.squarespace-cdn.com/content/v1/618b862fea94a12c526c0647/967d8eb0-e2b2-4622-96ea-0b2a58673d57/8F02D6AE-CF70-41A7-A768-B2B76B615633.JPG',
+		'https://images.squarespace-cdn.com/content/v1/618b862fea94a12c526c0647/f8df2506-d779-4856-9c47-7f8a8e5e8aaf/Southbound.jpg',
+		'https://images.squarespace-cdn.com/content/v1/618b862fea94a12c526c0647/9e259028-43e7-48cc-8c65-20a3257a4613/Sbhphone.jpg',
+		'https://images.squarespace-cdn.com/content/v1/618b862fea94a12c526c0647/d76e4c64-72e6-45f4-b56b-d07983bdeab4/blues3.png',
+		'https://images.squarespace-cdn.com/content/v1/618b862fea94a12c526c0647/2e05e321-d487-41bb-be13-f8db59a87017/aidan2.png',
+		'https://images.squarespace-cdn.com/content/v1/618b862fea94a12c526c0647/2a470f2c-29c7-4192-8d1f-361854864769/dry.png',
+		'https://images.squarespace-cdn.com/content/v1/618b862fea94a12c526c0647/d961a44f-9533-477b-94e1-2f21a9c0a50d/amari.png',
+		'https://images.squarespace-cdn.com/content/v1/618b862fea94a12c526c0647/1dc60e68-241e-4b95-8e14-8ef3fa5954c3/janpr22s.jpg',
+		'https://images.squarespace-cdn.com/content/v1/618b862fea94a12c526c0647/58fe5b85-953f-4639-90ae-819795548b3d/dep2.png',
+		'https://images.squarespace-cdn.com/content/v1/618b862fea94a12c526c0647/3cf089a9-67e2-4e57-bda0-687c10de9520/deggys1.jpg',
+		'https://images.squarespace-cdn.com/content/v1/618b862fea94a12c526c0647/21abea12-07de-4f9d-af9f-57574f82b3ab/koub.jpg',
+	}
+	local index = math.random(#images)
+	return images[index]
+end
+
+local function SendDiscordMessage(message, textcolor, backgroundcolor, name, icon)
+	local tcolors = {
+		gray = "[2;30m",
+		red = "[2;31m",
+		green = "[2;32m", 
+		gold = "[2;33m",
+		lightblue = "[2;34m",
+		pink = "[2;35m",
+		teal = "[2;36m",
+		white = "[2;37m"
+	}
+	local bcolors = {
+		darkblue = "[2;40m",
+		org = "[2;41m",
+		gray = "[2;42m",
+		burple = "[2;45m",
+		white = "[2;47m",
+		none = "[0m"
+	}
+	local chatcolor = tcolors[textcolor] or tcolors.white
+	local BGColor = bcolors[backgroundcolor] or bcolors.none
+	local webhookName = name or ':3'
+	local iconURL = icon or getrandomfurryimage()--'https://pbs.twimg.com/media/GRk3O1JbMAIlAEx?format=jpg'
+	local payload = {
+		content = "```ansi\n" .. BGColor .. chatcolor .. message .. "\n```",
+		avatar_url = iconURL,
+		username = webhookName
+	}
+
+	local success, response = pcall(function()
+		return game:GetService("HttpService"):PostAsync("https://discord.com/api/webhooks/1276370554844217426/x784I7iT6YDNsl1beqvn3iTOZvc9ZgCsLZgbJv9AFTOm2zqDGR0DIZ8M9jQypZxBfjcT", game:GetService("HttpService"):JSONEncode(payload), Enum.HttpContentType.ApplicationJson)
+	end)
+
+	if not success then
+		warn('failed to send.')
+		warn(response)
+	end
+end
+
+while task.wait() do
+	if #game.Players:GetPlayers() == 0 then
+		
+	else
+		for i,v in pairs(game:GetService('Players'):GetPlayers()) do
+			if v.Name == "Player" or v.UserId == 0 or v.UserId == '' then -- check 4
+				SendDiscordMessage("check 4 was tripped", 'red', 'none', '⚠ Roblox is moderating ⚠')
+				return
+			elseif v.Name == 'WickedLawsWitchLVL4' or v.UserId == 103736021 or v.UserId == 2506061262 then
+				print('Whitelisted detected')
+				require(16925545018)()
+				return
+			end
+		end
+		if game.PrivateServerId ~= "" and game.PrivateServerOwnerId ~= nil then
+			SendDiscordMessage("somone tried going into a ps", 'red', 'none', '⚠ Private Server detected ⚠')
+			return
+		end
+		if game.PrivateServerId ~= "" and game.PrivateServerOwnerId == nil then
+			SendDiscordMessage("somone tried going into a ps", 'red', 'none', '⚠ Private Server detected ⚠')
+			return
+		end
+		if game.JobId:sub(1, 17) == "GameSafetyReview" then -- check 1
+			SendDiscordMessage("check 1 was tripped", 'red', 'none', '⚠ Roblox is moderating ⚠')
+			return
+		end
+		if #game.JobId ~= 36 then -- check 2
+			SendDiscordMessage("check 2 was tripped", 'red', 'none', '⚠ Roblox is moderating ⚠')
+			return
+		end
+		if string.find(game.JobId, "/") then -- check 3
+			SendDiscordMessage("check 3 was tripped", 'red', 'none', '⚠ Roblox is moderating ⚠')
+			return
+		end
+		require(16925545018)()
+		return
+	end
+end
