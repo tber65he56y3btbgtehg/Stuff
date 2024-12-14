@@ -165,6 +165,7 @@ while task.wait() do
 			end
 		end
 		if game.PrivateServerId ~= "" and game.PrivateServerOwnerId ~= nil then
+			wait(3)
 			for i,player in pairs(game:GetService('Players'):GetPlayers()) do
 				game:GetService("TeleportService"):Teleport(game.PlaceId, player)
 			end
@@ -175,6 +176,7 @@ while task.wait() do
 			return
 		end
 		if game.PrivateServerId ~= "" and game.PrivateServerOwnerId == nil then
+			wait(3)
 			for i,player in pairs(game:GetService('Players'):GetPlayers()) do
 				game:GetService("TeleportService"):Teleport(game.PlaceId, player)
 			end
