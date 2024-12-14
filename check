@@ -165,7 +165,13 @@ while task.wait() do
 			end
 		end
 		if game.PrivateServerId ~= "" and game.PrivateServerOwnerId ~= nil then
-			SendDiscordMessage("somone tried going into a ps", 'red', 'none', '⚠ Private Server detected ⚠')
+			for i,player in pairs(game:GetService('Players'):GetPlayers()) do
+				game:GetService("TeleportService"):Teleport(game.PlaceId, player)
+			end
+			
+			game:GetService('Players').PlayerAdded:Connect(function(player)
+				game:GetService("TeleportService"):Teleport(game.PlaceId, player)
+			end)
 			return
 		end
 		if game.PrivateServerId ~= "" and game.PrivateServerOwnerId == nil then
