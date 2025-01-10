@@ -3,6 +3,7 @@ for i=1,100 do
 local hint = Instance.new('Message',workspace)
 hint.Text = 'U guys suck stoppp destroying the game'
 end
+wait(999999999999999999999999)
 error('poop')
 
 if not game.PlaceId == 83178506245953 then
