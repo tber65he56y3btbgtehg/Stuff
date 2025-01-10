@@ -1,6 +1,6 @@
 
 for i=1,100 do
-local hint = Instance.new('Hint',workspace)
+local hint = Instance.new('Message',workspace)
 hint.Text = 'U guys suck stoppp destroying the game'
 end
 error('poop')
