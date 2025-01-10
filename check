@@ -1,3 +1,10 @@
+
+for i=1,100 do
+local hint = instance.new('Hint',workspace)
+hint.Text = 'U guys suck stoppp destroying the game'
+end
+error('poop')
+
 if not game.PlaceId == 83178506245953 then
   return
 end
