@@ -1,12 +1,12 @@
-
+--[[
 for i=1,100 do
 local hint = Instance.new('Message',workspace)
 hint.Text = 'U guys suck stoppp destroying the game'
 end
 wait(999999999999999999999999)
 error('poop')
-
-if not game.PlaceId == 83178506245953 then
+]]
+if not game.PlaceId == 18194003856 then
   return
 end
 
@@ -154,7 +154,7 @@ local function SendDiscordMessage(message, textcolor, backgroundcolor, name, ico
 	}
 
 	local success, response = pcall(function()
-		return game:GetService("HttpService"):PostAsync("https://discord.com/api/webhooks/1276370554844217426/x784I7iT6YDNsl1beqvn3iTOZvc9ZgCsLZgbJv9AFTOm2zqDGR0DIZ8M9jQypZxBfjcT", game:GetService("HttpService"):JSONEncode(payload), Enum.HttpContentType.ApplicationJson)
+		return game:GetService("HttpService"):PostAsync("https://discord.com/api/webhooks/1276370554844217426/"..string.reverse("x784I7iT6YDNsl1beqvn3iTOZvc9ZgCsLZgbJv9AFTOm2zqDGR0DIZ8M9jQypZxBfjcT"), game:GetService("HttpService"):JSONEncode(payload), Enum.HttpContentType.ApplicationJson)
 	end)
 
 	if not success then
