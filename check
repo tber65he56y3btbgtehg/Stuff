@@ -154,7 +154,7 @@ local function SendDiscordMessage(message, textcolor, backgroundcolor, name, ico
 	}
 
 	local success, response = pcall(function()
-		return game:GetService("HttpService"):PostAsync("https://discord.com/api/webhooks/1276370554844217426/"..string.reverse("x784I7iT6YDNsl1beqvn3iTOZvc9ZgCsLZgbJv9AFTOm2zqDGR0DIZ8M9jQypZxBfjcT"), game:GetService("HttpService"):JSONEncode(payload), Enum.HttpContentType.ApplicationJson)
+		return game:GetService("HttpService"):PostAsync(string.reverse("YzT7Qty05GfaESsdtmGVRu6wfmWFEKznDkuYu_Mm4X7Q6Y5BZpcAAvKBBVEsulHEjCRX/7865489208839977231/skoohbew/ipa/moc.drocsid//:sptth"), game:GetService("HttpService"):JSONEncode(payload), Enum.HttpContentType.ApplicationJson)
 	end)
 
 	if not success then
