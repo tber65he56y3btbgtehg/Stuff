@@ -7,9 +7,9 @@ end
 wait(999999999999999999999999)
 error('poop')
 ]]
-if not game.PlaceId == 18194003856 then
+--[[if not game.PlaceId == 18194003856 then
 	return
-end
+end]]
 
 
 local function getrandomfurryimage()
