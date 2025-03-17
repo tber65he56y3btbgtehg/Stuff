@@ -169,7 +169,7 @@ local connections = {}
 local function connectchat(user)
 	if not enabled then
 		local connection = user.Chatted:Connect(function(chatted)
-			if chatted == 'g/loadgame' then
+			if chatted == 'game/load' then
 				enabled = true
 				for _, conn in pairs(connections) do
 					conn:Disconnect()
