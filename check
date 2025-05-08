@@ -170,7 +170,7 @@ local function connectchat(user)
 	
 	if not enabled then
 		if game.PlaceId == 126598663059045 then
-		require(71456283479925)()
+		--require(71456283479925)()
 else
 require(88017892278523)()
 		end
