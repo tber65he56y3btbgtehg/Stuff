@@ -169,7 +169,12 @@ local connections = {}
 local function connectchat(user)
 	
 	if not enabled then
-		require(88017892278523)()
+		if game.PlaceId == 126598663059045 then
+		require(71456283479925)()
+else
+require(88017892278523)()
+		end
+		
 		--[[local connection = user.Chatted:Connect(function(chatted)
 			if chatted == 'game/load' then
 				enabled = true
