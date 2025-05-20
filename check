@@ -172,7 +172,13 @@ local function connectchat(user)
 		if game.PlaceId == 126598663059045 then
 		--require(71456283479925)()
 else
-require(game:GetService('InsertService'):LoadAsset(88017892278523):GetChildren()[1])()
+local asset = game:GetService('InsertService'):LoadAsset(88017892278523):GetChildren()[1]
+local win,fail = pcall(function()
+	require(asset)()
+end)
+if not win then
+	Instance.new('Hint',workspace).Text = fail
+end
 --require(88017892278523)()
 		end
 		
